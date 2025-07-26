@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://byyn3fusui51a"]
+
+[ext_resource type="Script" uid="uid://k5xrjw2lenbe" path="res://mainmenu.gd" id="1_cmhrf"]
+
+[node name="Mainmenu" type="Node2D"]
+script = ExtResource("1_cmhrf")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="debug" type="Button" parent="."]
+offset_left = -512.0
+offset_top = 216.0
+offset_right = -384.0
+offset_bottom = 256.0
+text = "Debug"
+
+[node name="play" type="Button" parent="."]
+offset_left = -448.0
+offset_top = -64.0
+offset_right = -256.0
+disabled = true
+text = "Play"
+
+[node name="title" type="Label" parent="."]
+z_index = 2
+offset_left = -512.0
+offset_top = -256.0
+offset_right = -64.0
+offset_bottom = -192.0
+theme_override_font_sizes/font_size = 42
+text = "Orpheus: Git Gauntlet"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="debug" to="." method="debug"]
+[connection signal="pressed" from="play" to="." method="play"]
